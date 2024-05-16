@@ -57,4 +57,23 @@ rails db:migrate
 rails g scaffold Course title:string description:string
 ```
 
+# Para abrir la consola de rails 
+```bash
+rails c 
+```
+para crear un usuario en la tabla Admin 
+```rails c
+Admin.create!(email: "admin@example.com", password: "password")
+```
+# Para precompilar los assets y funcione tailwind o extras cargas 
+Para local
+```bash
+rails assets:precompile
+```
+Para producción
+```bash
+RAILS_ENV=production bundle exec rails assets:precompile
+```
+
+
 

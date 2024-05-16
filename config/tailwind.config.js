@@ -13,7 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
-    color: {
+    colors: {
       'orange': {
         '50': '#fef7ee',
         '100': '#fdedd7',

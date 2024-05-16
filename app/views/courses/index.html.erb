@@ -2,20 +2,18 @@
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
+  <p class="text-green bg-green-600">Este es un texto blanco sobre un fondo azul.</p>
+
 
   <% content_for :title, "Courses" %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Courses</h1>
-    <%= link_to "New course", new_course_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  <%= link_to "New course", new_course_path, class: "inline-block bg-green-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" %>
   </div>
 
-  <div id="courses" class="min-w-full">
-    <% @courses.each do |course| %>
-      <%= render course %>
-      <p>
-        <%= link_to "Show this course", course, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
-    <% end %>
+  <div id="courses" class="min-w-full flex flex-wrap justify-center gap-14 pb-6">
+    
+      <%= render @courses %>
+    
   </div>
 </div>
