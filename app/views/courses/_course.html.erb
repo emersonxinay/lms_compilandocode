@@ -1,17 +1,22 @@
-<div id="<%= dom_id course %>" class="max-w-xs rounded overflow-hidden shadow-lg">
-  <!-- Imagen de placeholder -->
-  <img src="https://via.placeholder.com/300x200" alt="Placeholder" class="w-full">
+<div id="<%= dom_id(course) %>" class="max-w-xs rounded overflow-hidden shadow-lg">
+  <%= link_to course_path(course), class: "flex flex-col h-full" do %>
+    <% if course.image.present? %>
+      <%= image_tag course.image, class: "w-full rounded-t" %>
+    <% else %>
+      <!-- Imagen de placeholder -->
+      <img src="https://via.placeholder.com/300x200" alt="Placeholder" class="w-full">
+    <% end %>
+    <div class="px-6 py-4">
+      <!-- Título -->
+      <div class="font-bold text-xl mb-2"><%= course.title %></div>
+      
+      <!-- Descripción -->
+      <p class="text-gray-700 text-base"><%= course.description %></p>
+    </div>
 
-  <div class="px-6 py-4">
-    <!-- Título -->
-    <div class="font-bold text-xl mb-2"><%= course.title %></div>
-    
-    <!-- Descripción -->
-    <p class="text-gray-700 text-base"><%= course.description %></p>
-  </div>
-
-  <!-- Botón -->
-  <div class="px-6 py-4">
-    <a href="<%= course_path(course) %>" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">Ver más</a>
-  </div>
+    <!-- Botón -->
+    <div class="px-6 py-4">
+      <a href="<%= course_path(course) %>" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block">Ver más</a>
+    </div>
+  <% end %>
 </div>

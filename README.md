@@ -88,5 +88,25 @@ Para generar el pdf en diagrama con la base de datos
 bundle exec erd
 ```
 
+# para procesar y guardar imagenes 
+en gemfile 
+```gemfile
+gem "image_processing", "~> 1.2"
+```
+
+Actualizar las gemas
+```bash
+bundle install
+```
+para crear los storage 
+```bash
+rails active_storage:install
+```
+crear la migración
+```bash
+rails db:migrate
+```
+
+
 
 
