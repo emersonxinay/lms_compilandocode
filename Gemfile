@@ -71,4 +71,6 @@ end
 
 gem "font-awesome-sass" , "~> 6.5.1" 
 gem "devise" , "~> 4.9"
+# para generar el diagrama del proyecto 
+gem 'rails-erd'
 
